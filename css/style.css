@@ -1329,6 +1329,9 @@ body._lock {
   background-color: #fff;
   transform: rotate(-45deg);
 }
+.featured__slide {
+  text-decoration: none;
+}
 .featured__slide img {
   width: 400px;
   height: 400px;
