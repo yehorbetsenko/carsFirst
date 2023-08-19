@@ -373,6 +373,7 @@ body._lock {
   color: #231f20;
 }
 .nav__item-special-a {
+  display: block;
   color: #231f20;
   text-decoration: none;
   position: relative;
@@ -859,8 +860,11 @@ body._lock {
   .nav__item p::before {
     display: none;
   }
-  .nav__item-special a::before {
+  .nav__item-special-a::before {
     display: none;
+  }
+  .nav__item-special-a::after {
+    right: 0;
   }
   .nav__special {
     flex-direction: column;
@@ -2170,6 +2174,7 @@ body._lock {
   outline: none;
   border: 2px solid #231f20;
   border-radius: 5px;
+  color: #231f20;
 }
 .vehicles__filter {
   display: none;
