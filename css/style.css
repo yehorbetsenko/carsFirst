@@ -2168,6 +2168,11 @@ body._lock {
   font-weight: 600;
   text-transform: uppercase;
 }
+@media (max-width: 1170px) {
+  .vehicles__filter-name {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 850));
+  }
+}
 .vehicles__select {
   font-size: 24px;
   font-weight: 500;
@@ -2176,6 +2181,11 @@ body._lock {
   border-radius: 5px;
   color: #231f20;
   background: transparent;
+}
+@media (max-width: 1170px) {
+  .vehicles__select {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 850));
+  }
 }
 .vehicles__filter {
   display: none;
@@ -2196,6 +2206,17 @@ body._lock {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1170px) {
+  .vehicles__catalog-title {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .vehicles__catalog-title {
+    margin-bottom: calc(15px + 15 * ((100vw - 320px) / 850));
+  }
 }
 .vehicles__catalog-items {
   display: grid;
@@ -2281,6 +2302,10 @@ body._lock {
   }
 }
 @media (max-width: 500px) {
+  .vehicles__container {
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
   .vehicles__catalog-items {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -2353,11 +2378,6 @@ body._lock {
   height: 500px;
   object-fit: cover;
 }
-@media (max-width: 1170px) {
-  .car__slide-big {
-    height: calc(300px + 200 * ((100vw - 320px) / 850));
-  }
-}
 .car__button {
   position: absolute;
   bottom: 0px;
@@ -2398,7 +2418,6 @@ body._lock {
   border: 1px solid #231f20;
   border-radius: 15px;
   overflow: hidden;
-  height: 470px;
 }
 .car__desc-title {
   font-size: 20px;
@@ -2571,9 +2590,33 @@ body._lock {
     display: flex;
     flex-direction: column;
   }
-  .car__desc {
-    height: auto;
-    min-height: 470px;
+  .car__slide {
+    height: 180px;
+  }
+}
+@media (max-width: 1100px) and (max-width: 1170px) {
+  .car__slide {
+    height: calc(120px + 60 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1100px) {
+  .car__slide-big {
+    height: 500px;
+  }
+}
+@media (max-width: 1100px) and (max-width: 1170px) {
+  .car__slide-big {
+    height: calc(300px + 200 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1100px) {
+  .car__button {
+    margin-bottom: 75px;
+  }
+}
+@media (max-width: 1100px) and (max-width: 1170px) {
+  .car__button {
+    margin-bottom: calc(40px + 35 * ((100vw - 320px) / 850));
   }
 }
 @media (max-width: 500px) {
