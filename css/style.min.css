@@ -2175,6 +2175,7 @@ body._lock {
   border: 2px solid #231f20;
   border-radius: 5px;
   color: #231f20;
+  background: transparent;
 }
 .vehicles__filter {
   display: none;
@@ -2282,5 +2283,307 @@ body._lock {
 @media (max-width: 500px) {
   .vehicles__catalog-items {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.car__back {
+  position: relative;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  background-color: transparent;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.car__back::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #231f20;
+  transition: all 0.2s linear;
+}
+.car__back:hover::before {
+  border-left: 7px solid #bf1b2c;
+  transform: translateY(-50%) rotate(90deg);
+}
+.car__title {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1170px) {
+  .car__title {
+    font-size: calc(24px + 8 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .car__title {
+    margin-bottom: calc(10px + 20 * ((100vw - 320px) / 850));
+  }
+}
+.car__content {
+  display: grid;
+  grid-template-columns: 800px 1fr;
+  grid-gap: 30px;
+}
+.car__slider {
+  position: relative;
+  max-width: 800px;
+}
+.car__wrapper {
+  margin-top: 5px;
+}
+.car__slide {
+  width: 250px;
+  height: 180px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.car__slide-big {
+  border-radius: 15px;
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+}
+@media (max-width: 1170px) {
+  .car__slide-big {
+    height: calc(300px + 200 * ((100vw - 320px) / 850));
+  }
+}
+.car__button {
+  position: absolute;
+  bottom: 0px;
+  background-color: #fff;
+  outline: none;
+  margin-top: auto;
+  margin-bottom: 75px;
+  border-radius: 15px 0px 0px 15px;
+}
+.car__button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 21.5px;
+  width: 15px;
+  height: 2px;
+  background-color: #231f20;
+  transform: rotate(45deg) translateX(-50%);
+}
+.car__button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 21.5px;
+  width: 15px;
+  height: 2px;
+  background-color: #231f20;
+  transform: rotate(-45deg) translateX(-50%);
+}
+.car__button-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+.car__button-next {
+  right: 0;
+}
+.car__desc {
+  border: 1px solid #231f20;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 470px;
+}
+.car__desc-title {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #231f20;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 1170px) {
+  .car__desc-title {
+    font-size: calc(18px + 2 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .car__desc-title {
+    padding-top: calc(10px + 10 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .car__desc-title {
+    padding-bottom: calc(10px + 10 * ((100vw - 320px) / 850));
+  }
+}
+.car__desc-params {
+  padding: 20px;
+}
+@media (max-width: 1170px) {
+  .car__desc-params {
+    padding: calc(10px + 10 * ((100vw - 320px) / 850));
+  }
+}
+.car__desc-param {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (max-width: 1170px) {
+  .car__desc-param {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 850));
+  }
+}
+.car__desc-param span {
+  font-weight: 400;
+  text-transform: none;
+}
+.car__desc-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background-color: #bf1b2c;
+  border-top: 1px solid #231f20;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+@media (max-width: 1170px) {
+  .car__desc-button {
+    font-size: calc(18px + 2 * ((100vw - 320px) / 850));
+  }
+}
+.car__desc-button:hover {
+  background-color: #fff;
+  color: #bf1b2c;
+}
+.car__less {
+  margin-top: 20px;
+  padding: 10px;
+  color: #231f20;
+}
+.car__less-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.car__less-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.car__less-button {
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a69b9e;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-left: 20px;
+  z-index: 5;
+  cursor: pointer;
+}
+.car__less-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #a69b9e;
+  transition: all 0.2s linear;
+}
+.car__less-button._rotate::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+.car__more {
+  font-size: 16px;
+  font-weight: 400;
+  color: #231f20;
+  line-height: 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  z-index: -200;
+  margin-top: 30px;
+  transition: all 0.3s linear;
+}
+.car__more._active {
+  line-height: 1.5;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.featured__slide-car {
+  text-decoration: none;
+}
+.featured__slide-car img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.featured__text-car {
+  text-align: center;
+  max-width: 200px;
+  height: 70px;
+}
+
+@media (max-width: 1300px) {
+  .car__content {
+    grid-template-columns: 700px 1fr;
+  }
+}
+@media (max-width: 1230px) {
+  .car__content {
+    grid-template-columns: 650px 1fr;
+  }
+}
+@media (max-width: 1150px) {
+  .car__content {
+    grid-template-columns: 600px 1fr;
+  }
+}
+@media (max-width: 1100px) {
+  .car__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .car__desc {
+    height: auto;
+    min-height: 470px;
+  }
+}
+@media (max-width: 500px) {
+  .car__container {
+    padding: 0 10px;
+  }
+  .car__less-button {
+    margin-top: 5px;
+  }
+  .car__more {
+    margin-top: 5px;
   }
 }
