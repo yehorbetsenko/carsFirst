@@ -2747,6 +2747,7 @@ body._lock {
   outline: none;
   font-weight: 500;
   background-color: transparent;
+  color: #231f20;
   padding-left: 20px;
   margin-bottom: 20px;
   cursor: pointer;
