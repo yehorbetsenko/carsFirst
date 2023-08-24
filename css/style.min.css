@@ -750,11 +750,12 @@ body._lock {
 }
 .nav__special-text_big {
   position: relative;
+  line-height: 1;
 }
 .nav__special-text_big:before {
   content: "";
   position: absolute;
-  top: 26px;
+  top: 16px;
   left: -20px;
   transform: rotate(45deg);
   width: 10px;
@@ -765,7 +766,7 @@ body._lock {
 .nav__special-text_big:after {
   content: "";
   position: absolute;
-  bottom: 26px;
+  bottom: 16px;
   left: -20px;
   transform: rotate(-45deg);
   width: 10px;
