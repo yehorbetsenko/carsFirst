@@ -3394,3 +3394,8 @@ body._lock {
     flex-direction: column;
   }
 }
+@media (max-width: 500px) {
+  .conf__types {
+    flex-wrap: wrap;
+  }
+}
