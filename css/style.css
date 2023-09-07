@@ -3258,7 +3258,7 @@ body._lock {
   color: #bf1b2c;
 }
 .conf__form-price {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
   font-size: 16px;
@@ -3273,6 +3273,40 @@ body._lock {
 }
 .conf__form-price_number {
   display: flex;
+}
+.conf__form-price._price {
+  display: flex;
+}
+.conf__form-contact {
+  display: none;
+  border: 1px solid #bf1b2c;
+  border-radius: 15px;
+  background-color: #bf1b2c;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px;
+  max-width: 400px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+@media (max-width: 1170px) {
+  .conf__form-contact {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .conf__form-contact {
+    max-width: calc(300px + 100 * ((100vw - 320px) / 850));
+  }
+}
+.conf__form-contact:hover {
+  background-color: #fff;
+  color: #bf1b2c;
+}
+.conf__form-contact._contact {
+  display: block;
 }
 .conf__types {
   display: flex;
